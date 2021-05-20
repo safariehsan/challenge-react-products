@@ -1,15 +1,15 @@
 import React from "react";
-import ProductList from "./components/ProductList/ProductList";
-import Container from "./hoc/Container";
-import './App.scss'
+import ProductList from "./components/Product/ProductList/ProductList";
+import ProductDetail from "./components/Product/ProductDetail/ProductDetail";
+import "./App.scss";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <Container>
-      <h1>Product List</h1>
-      <p>Developed by EhsanSafari as a test project for Malltina company</p>
-      <ProductList />
-    </Container>
+    <Router>
+      <Route path="/" exact component={ProductList} />
+      <Route path="/product" component={ProductDetail} />
+    </Router>
   );
 };
 
