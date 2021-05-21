@@ -70,6 +70,7 @@ class ProductList extends React.Component {
       <Container>
         <h1>Online Shopping</h1>
         <p>Developed by EhsanSafari as a test project for interview process</p>
+        <p className='page-info'>page <b>{this.state.currentPage + 1}</b> of {this.state.pageCount}</p>
         {!this.state.isLoaded && <img src={Loading} alt="loading" />}
         <div className="product-list">{this.state.products}</div>
         <ReactPaginate

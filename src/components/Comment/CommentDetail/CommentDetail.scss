@@ -1,0 +1,29 @@
+.comment-detail {
+  margin: 20px 0;
+  display: flex;
+  gap: 2%;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+  }
+  .comment-info {
+    text-align: left;
+    .comment-title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .comment-email {
+      text-decoration: none;
+      color: #0068c5;
+      font-size: 16px;
+    }
+    .comment-body {
+      font-size: 16px;
+      color: rgb(110, 110, 110);
+    }
+  }
+}

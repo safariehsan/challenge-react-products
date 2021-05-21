@@ -3,7 +3,7 @@ import Container from "../../../hoc/Container";
 import { Link } from "react-router-dom";
 import SampleImage from "../../../assets/images/sample.png";
 import './ProductDetail.scss';
-import CommentList from '../../Comments/CommentList/CommentList'
+import CommentList from '../../Comment/CommentList/CommentList'
 
 class ProductDetail extends React.Component {
   constructor(props) {
@@ -21,14 +21,14 @@ class ProductDetail extends React.Component {
   render() {
     return (
       <Container>
-        <h1>Product Detail: </h1>
+        <Link to="/">Back to Products</Link>
         <div className="product-detail">
           <img src={SampleImage} alt="sample" />
-          <p>{this.getCurrentProduct().title}</p>
+          <h1>{this.getCurrentProduct().title}</h1>
         </div>
-        <hr />
+        
         <CommentList id={this.getCurrentProduct().id} />
-        <Link to="/">Back to Products</Link>
+        
       </Container>
     );
   }
